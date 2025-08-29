@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
-            --primary: #1a56db;
-            --secondary: #0f2e68;
-            --accent: #ff3a00;
-            --light: #f3f4f6;
-            --dark: #1f2937;
-            --text: #333333;
+            --primary: #FFD700; /* Желтый вместо синего */
+            --secondary: #000000; /* Черный */
+            --accent: #FFC000; /* Темно-желтый акцент */
+            --light: #1a1a1a; /* Темный вместо светлого */
+            --dark: #333; /* Темно-серый */
+            --text: #f3f3f3; /* Светлый текст вместо темного */
+            --card-bg: #2a2a2a; /* Фон карточек */
         }
         
         * {
@@ -26,6 +27,7 @@
             color: var(--text);
             line-height: 1.6;
             overflow-x: hidden;
+            background-color: #121212; /* Темный фон для всего сайта */
         }
         
         .container {
@@ -37,8 +39,8 @@
         
         /* Header */
         header {
-            background-color: white;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #000; /* Черный фон шапки */
+            box-shadow: 0 2px 10px rgba(255, 215, 0, 0.2); /* Желтая тень */
             position: fixed;
             width: 100%;
             top: 0;
@@ -57,13 +59,13 @@
             align-items: center;
             font-weight: 700;
             font-size: 24px;
-            color: var(--primary);
+            color: var(--primary); /* Желтый цвет логотипа */
             text-decoration: none;
         }
         
         .logo i {
             margin-right: 10px;
-            color: var(--accent);
+            color: var(--primary); /* Желтый цвет иконки */
         }
         
         .nav-menu {
@@ -77,18 +79,18 @@
         
         .nav-menu a {
             text-decoration: none;
-            color: var(--dark);
+            color: white; /* Белый цвет текста меню */
             font-weight: 500;
             transition: color 0.3s;
         }
         
         .nav-menu a:hover {
-            color: var(--primary);
+            color: var(--primary); /* Желтый при наведении */
         }
         
         .header-cta {
             background-color: var(--primary);
-            color: white;
+            color: var(--secondary); /* Черный текст на желтом фоне */
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
@@ -97,7 +99,7 @@
         }
         
         .header-cta:hover {
-            background-color: var(--secondary);
+            background-color: #e6c300; /* Темнее желтый при наведении */
         }
         
         .mobile-menu-btn {
@@ -111,7 +113,7 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1594122230686-4c18c9caf5cf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80') no-repeat center center/cover;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1576671414122-cc023396ae5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1800&q=80') no-repeat center center/cover;
             color: white;
             padding: 160px 0 100px;
             text-align: center;
@@ -137,8 +139,8 @@
         }
         
         .btn-primary {
-            background-color: var(--accent);
-            color: white;
+            background-color: var(--primary);
+            color: var(--secondary); /* Черный текст */
             padding: 12px 30px;
             border-radius: 5px;
             text-decoration: none;
@@ -147,14 +149,14 @@
         }
         
         .btn-primary:hover {
-            background-color: #e03500;
+            background-color: #e6c300; /* Темнее желтый */
         }
         
         .btn-secondary {
             background-color: transparent;
             color: white;
             padding: 12px 30px;
-            border: 2px solid white;
+            border: 2px solid var(--primary); /* Желтая рамка */
             border-radius: 5px;
             text-decoration: none;
             font-weight: 600;
@@ -162,13 +164,13 @@
         }
         
         .btn-secondary:hover {
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 215, 0, 0.1); /* Слегка желтый фон */
         }
         
         /* Services */
         .services {
             padding: 80px 0;
-            background-color: var(--light);
+            background-color: var(--light); /* Темный фон */
         }
         
         .section-title {
@@ -178,12 +180,12 @@
         
         .section-title h2 {
             font-size: 2.2rem;
-            color: var(--secondary);
+            color: var(--primary); /* Желтый заголовок */
             margin-bottom: 15px;
         }
         
         .section-title p {
-            color: #666;
+            color: #ccc; /* Светло-серый текст */
             max-width: 700px;
             margin: 0 auto;
         }
@@ -195,21 +197,22 @@
         }
         
         .service-card {
-            background: white;
+            background: var(--card-bg); /* Темный фон карточки */
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #444; /* Граница карточки */
         }
         
         .service-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2); /* Желтая тень */
         }
         
         .service-img {
             height: 200px;
-            background-color: #ddd;
+            background-color: #444; /* Темно-серый фон */
             background-position: center;
             background-size: cover;
         }
@@ -221,17 +224,17 @@
         .service-content h3 {
             font-size: 1.4rem;
             margin-bottom: 15px;
-            color: var(--secondary);
+            color: var(--primary); /* Желтый заголовок */
         }
         
         .service-content p {
             margin-bottom: 20px;
-            color: #666;
+            color: #ccc; /* Светло-серый текст */
         }
         
         .service-price {
             font-weight: 700;
-            color: var(--primary);
+            color: var(--primary); /* Желтая цена */
             font-size: 1.2rem;
             margin-bottom: 15px;
             display: block;
@@ -240,6 +243,7 @@
         /* Advantages */
         .advantages {
             padding: 80px 0;
+            background-color: #000; /* Черный фон */
         }
         
         .advantages-grid {
@@ -252,24 +256,31 @@
         .advantage-card {
             text-align: center;
             padding: 30px 20px;
+            background-color: var(--card-bg); /* Темный фон карточки */
+            border-radius: 10px;
+            border: 1px solid #444; /* Граница карточки */
         }
         
         .advantage-icon {
             font-size: 3rem;
-            color: var(--primary);
+            color: var(--primary); /* Желтая иконка */
             margin-bottom: 20px;
         }
         
         .advantage-card h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
-            color: var(--secondary);
+            color: var(--primary); /* Желтый заголовок */
+        }
+        
+        .advantage-card p {
+            color: #ccc; /* Светло-серый текст */
         }
         
         /* Portfolio */
         .portfolio {
             padding: 80px 0;
-            background-color: var(--light);
+            background-color: var(--light); /* Темный фон */
         }
         
         .portfolio-grid {
@@ -302,7 +313,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(26, 86, 219, 0.8);
+            background: rgba(255, 215, 0, 0.85); /* Желтый оверлей */
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -311,7 +322,7 @@
             transition: opacity 0.3s;
             padding: 20px;
             text-align: center;
-            color: white;
+            color: var(--secondary); /* Черный текст */
         }
         
         .portfolio-item:hover .portfolio-overlay {
@@ -321,7 +332,7 @@
         /* Contact Form */
         .contact {
             padding: 80px 0;
-            background: linear-gradient(to right, var(--secondary), var(--primary));
+            background: linear-gradient(to right, #000, #333); /* Черно-серый градиент */
             color: white;
         }
         
@@ -335,6 +346,7 @@
         .contact-info h2 {
             font-size: 2.2rem;
             margin-bottom: 20px;
+            color: var(--primary); /* Желтый заголовок */
         }
         
         .contact-details {
@@ -350,14 +362,14 @@
         .contact-details i {
             margin-right: 15px;
             font-size: 1.2rem;
-            color: var(--accent);
+            color: var(--primary); /* Желтые иконки */
         }
         
         .contact-form {
-            background: white;
+            background: var(--card-bg); /* Темный фон формы */
             padding: 30px;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
         }
         
         .form-group {
@@ -367,26 +379,28 @@
         .form-group label {
             display: block;
             margin-bottom: 8px;
-            color: var(--dark);
+            color: var(--primary); /* Желтые метки */
             font-weight: 500;
         }
         
         .form-control {
             width: 100%;
             padding: 12px 15px;
-            border: 1px solid #ddd;
+            border: 1px solid #444;
             border-radius: 5px;
             font-size: 1rem;
+            background-color: #333; /* Темный фон полей */
+            color: white; /* Белый текст */
         }
         
         .form-control:focus {
             outline: none;
-            border-color: var(--primary);
+            border-color: var(--primary); /* Желтая рамка при фокусе */
         }
         
         .submit-btn {
-            background-color: var(--accent);
-            color: white;
+            background-color: var(--primary);
+            color: var(--secondary); /* Черный текст */
             border: none;
             padding: 12px 25px;
             border-radius: 5px;
@@ -398,12 +412,12 @@
         }
         
         .submit-btn:hover {
-            background-color: #e03500;
+            background-color: #e6c300; /* Темнее желтый */
         }
         
         /* Footer */
         footer {
-            background-color: var(--dark);
+            background-color: #000; /* Черный фон */
             color: white;
             padding: 50px 0 20px;
         }
@@ -419,6 +433,7 @@
             margin-bottom: 20px;
             position: relative;
             padding-bottom: 10px;
+            color: var(--primary); /* Желтый заголовок */
         }
         
         .footer-col h3::after {
@@ -428,11 +443,12 @@
             bottom: 0;
             width: 50px;
             height: 2px;
-            background-color: var(--accent);
+            background-color: var(--primary); /* Желтая линия */
         }
         
         .footer-col p {
             margin-bottom: 15px;
+            color: #ccc; /* Светло-серый текст */
         }
         
         .footer-links {
@@ -444,13 +460,13 @@
         }
         
         .footer-links a {
-            color: #ccc;
+            color: #ccc; /* Светло-серый текст */
             text-decoration: none;
             transition: color 0.3s;
         }
         
         .footer-links a:hover {
-            color: white;
+            color: var(--primary); /* Желтый при наведении */
         }
         
         .social-links {
@@ -465,21 +481,23 @@
             align-items: center;
             width: 40px;
             height: 40px;
-            background-color: rgba(255, 255, 255, 0.1);
+            background-color: rgba(255, 215, 0, 0.2); /* Полупрозрачный желтый */
             border-radius: 50%;
-            color: white;
+            color: var(--primary); /* Желтые иконки */
             transition: background-color 0.3s;
         }
         
         .social-links a:hover {
-            background-color: var(--primary);
+            background-color: var(--primary); /* Желтый фон */
+            color: #000; /* Черные иконки */
         }
         
         .copyright {
             text-align: center;
             padding-top: 30px;
             margin-top: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-top: 1px solid rgba(255, 215, 0, 0.2); /* Желтая линия */
+            color: #ccc; /* Светло-серый текст */
         }
         
         /* Responsive */
@@ -503,9 +521,9 @@
                 top: 80px;
                 left: -100%;
                 flex-direction: column;
-                background-color: white;
+                background-color: #000; /* Черный фон меню */
                 width: 100%;
-                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 10px 15px rgba(255, 215, 0, 0.2);
                 padding: 20px;
                 transition: 0.4s;
             }
@@ -579,7 +597,7 @@
             
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1557597777-2e807e50c5af?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1593081891731-f3e156a135e4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
                         <h3>Видеонаблюдение для дома</h3>
                         <p>Установка современных систем видеонаблюдения для частных домов и коттеджей с возможностью удаленного просмотра с телефона.</p>
@@ -589,7 +607,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1596726895343-5b2f2b1bff8f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
                         <h3>Видеонаблюдение для офиса</h3>
                         <p>Профессиональные системы для бизнеса с записью, облачным хранением и аналитикой.</p>
@@ -599,7 +617,7 @@
                 </div>
                 
                 <div class="service-card">
-                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1593081891731-f3e156a135e4?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80');"></div>
+                    <div class="service-img" style="background-image: url('https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80');"></div>
                     <div class="service-content">
                         <h3>Видеонаблюдение для магазина</h3>
                         <p>Системы для розничной торговли с детализацией высокой четкости и функцией распознавания лиц.</p>
@@ -665,7 +683,7 @@
             
             <div class="portfolio-grid">
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1593504664922-9d3a29f7415f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Проект видеонаблюдения в частном доме" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1566669437686-8b9c0ad4df76?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Проект видеонаблюдения в частном доме" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3>Частный дом в Томске</h3>
                         <p>Установлено 8 камер с ночным видением и удаленным доступом</p>
@@ -673,7 +691,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1566669437686-8b9c0ad4df76?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Проект видеонаблюдения в офисе" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Проект видеонаблюдения в офисе" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3>Офисный центр</h3>
                         <p>Система из 12 камер с детекцией движения и записью</p>
@@ -681,7 +699,7 @@
                 </div>
                 
                 <div class="portfolio-item">
-                    <img src="https://images.unsplash.com/photo-1607083206968-13611e3d76db?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" alt="Проект видеонаблюдения в магазине" class="portfolio-img">
+                    <img src="https://images.unsplash.com/photo-1593504664922-9d3a29f7415f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Проект видеонаблюдения в магазине" class="portfolio-img">
                     <div class="portfolio-overlay">
                         <h3>Продуктовый магазин</h3>
                         <p>6 камер с высоким разрешением и аналитикой покупательского потока</p>
